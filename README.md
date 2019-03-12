@@ -1,2 +1,2 @@
 # JavaEE
-code for reviewing
+reviewing notes with code
