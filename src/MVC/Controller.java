@@ -23,4 +23,20 @@ public class Controller {
     public void remove(@PathVariable Long id){
         //...
     }
+
+    @GetMapping("/something")
+    public ResponseEntity<String> handle(){
+        String body = ...;
+        String etag = ...;
+        return ResponseEntity.ok().eTag(etag).build(body);
+
+    }
+
+    @GetMapping("/quotes")
+    @ResponseBody
+    public DeferredResult<String> quotes(){
+        DeferredResult<String> deferredResult = new DeferredResult<String>();
+        //....
+        return deferredResult;
+    }
 }
